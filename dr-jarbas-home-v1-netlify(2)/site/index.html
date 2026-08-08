@@ -197,21 +197,27 @@
     </style>
     <style>
       .service-accordion .service-card{display:block;padding:0;overflow:hidden}
-      .service-card summary{display:grid;grid-template-columns:2rem 1fr 2rem;align-items:center;gap:1rem;padding:1.65rem;cursor:pointer;list-style:none}
+      .service-card summary{display:grid;grid-template-columns:2rem 1fr 2rem;align-items:start;gap:1rem;padding:1.65rem;cursor:pointer;list-style:none}
       .service-card summary::-webkit-details-marker{display:none}
       .service-card summary span{font-size:.72rem;letter-spacing:.16em;opacity:.58}
-      .service-card summary h3{margin:0;font-size:clamp(1.25rem,2vw,1.65rem)}
+      .service-card summary h3{margin:0 0 .55rem;font-size:clamp(1.25rem,2vw,1.65rem)}
+      .service-card summary p{margin:0;max-width:34rem;font-size:.86rem;line-height:1.55;opacity:.72}
+      .service-card summary .service-signals{display:block;margin-top:.65rem;color:#9b684b;font-size:.66rem;letter-spacing:.045em;line-height:1.5;text-transform:uppercase}
       .service-card summary i{display:grid;place-items:center;width:2rem;height:2rem;border:1px solid currentColor;border-radius:50%;font:400 1.25rem/1 sans-serif;transition:transform .25s ease}
       .service-card[open] summary i{transform:rotate(45deg)}
-      .service-card>p{margin:0;padding:0 1.65rem 1.65rem}
+      .service-accordion .service-card{min-height:0}
       .service-detail{margin:0 1.65rem 1.65rem;padding:1.35rem 0 0;border-top:1px solid rgba(15,58,62,.18)}
       .service-detail strong{display:block;margin-bottom:.55rem;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase}
       .service-detail p{margin:0 0 1.2rem;line-height:1.7}
       .service-actions{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
-      .service-primary{display:inline-flex;align-items:center;gap:.65rem;padding:.8rem 1rem;background:#123f43;color:#fff;text-decoration:none;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+      .service-primary{display:inline-flex;align-items:center;gap:.65rem;padding:.8rem 1rem;border:1px solid #123f43;color:#123f43;text-decoration:none;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
       .service-primary small{font-size:.58rem;opacity:.7;text-transform:none;letter-spacing:0}
       .service-primary.is-preview{cursor:default;opacity:.74}
-      .service-secondary{font-size:.76rem;color:inherit;text-underline-offset:.3rem}
+      .service-secondary{display:inline-flex;align-items:center;justify-content:center;padding:.82rem 1.05rem;background:#123f43;color:#fff!important;text-decoration:none;font-size:.76rem;letter-spacing:.035em}
+      .monogram{display:flex!important;align-items:baseline!important;justify-content:center!important;gap:0!important}
+      .monogram i{position:static!important;display:block!important;font-size:22px!important;line-height:1!important;transform:none!important}
+      .monogram i:first-child{margin-right:-.10em!important}
+      .monogram i:last-child{margin-left:-.02em!important}
       .decision-bridge{padding:clamp(4rem,8vw,8rem) max(6vw,24px);background:#f3eee5;text-align:center}
       .decision-bridge>*{max-width:860px;margin-left:auto;margin-right:auto}
       .decision-bridge h2 span,.decision-bridge h2 em{display:block}
@@ -220,12 +226,12 @@
       .decision-bridge .text-link{display:inline-flex;margin-top:1.25rem}
       @media(max-width:700px){
         .service-grid{gap:.8rem}
-        .service-card summary{grid-template-columns:1.5rem 1fr 1.8rem;gap:.65rem;padding:1.2rem}
+        .service-card summary{grid-template-columns:1.25rem 1fr 1.8rem;gap:.65rem;padding:1.2rem}
         .service-card summary h3{font-size:1.18rem;line-height:1.2}
-        .service-card>p{padding:0 1.2rem 1.2rem;line-height:1.55}
+        .service-card summary p{font-size:.82rem;line-height:1.5}
         .service-detail{margin:0 1.2rem 1.2rem;padding-top:1.1rem}
         .service-actions{align-items:flex-start;flex-direction:column;gap:.85rem}
-        .service-primary{width:100%;justify-content:center;box-sizing:border-box}
+        .service-primary,.service-secondary{width:100%;justify-content:center;box-sizing:border-box;text-align:center}
         .decision-bridge{text-align:left}
         .decision-bridge h2{font-size:clamp(2.15rem,11vw,3.15rem);line-height:1.04}
       }
@@ -383,33 +389,27 @@
         </div>
         <div class="service-grid service-accordion">
           <details class="service-card">
-            <summary><span>01</span><h3>Menopausa</h3><i aria-hidden="true">+</i></summary>
-            <p>Acompanhamento individualizado para atravessar essa fase com informação, segurança e qualidade de vida.</p>
+            <summary><span>01</span><div><h3>Menopausa</h3><p>Acompanhamento individualizado para atravessar essa fase com informação, segurança e qualidade de vida.</p><small class="service-signals">Sono · libido · ondas de calor · saúde óssea</small></div><i aria-hidden="true">+</i></summary>
             <div class="service-detail"><strong>Quando este cuidado pode fazer sentido</strong><p>Ondas de calor, alterações no sono, ressecamento, mudanças de humor ou dúvidas sobre reposição hormonal merecem uma avaliação que considere sintomas, histórico e riscos individuais.</p><div class="service-actions"><a class="service-primary is-preview" href="#" aria-disabled="true">Conhecer este cuidado <small>página em preparação</small></a><a class="service-secondary" href="https://wa.me/5519996249482?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20menopausa%20e%20consultar%20a%20agenda%20do%20Dr.%20Jarbas." target="_blank" rel="noreferrer">Prefere conversar agora? Fale com a equipe ↗</a></div></div>
           </details>
           <details class="service-card">
-            <summary><span>02</span><h3>Anticoncepção</h3><i aria-hidden="true">+</i></summary>
-            <p>Escolhas contraceptivas avaliadas de forma responsável, considerando seu momento, histórico e preferências.</p>
+            <summary><span>02</span><div><h3>Anticoncepção</h3><p>Escolhas contraceptivas avaliadas de forma responsável, considerando seu momento, histórico e preferências.</p><small class="service-signals">Pílula · DIU · implante · planejamento</small></div><i aria-hidden="true">+</i></summary>
             <div class="service-detail"><strong>Uma escolha que precisa ser individual</strong><p>Pílula, DIU ou implante não são decisões iguais para todas. A consulta permite comparar segurança, benefícios, efeitos e praticidade para chegar à opção mais adequada à sua vida.</p><div class="service-actions"><a class="service-primary is-preview" href="#" aria-disabled="true">Conhecer este cuidado <small>página em preparação</small></a><a class="service-secondary" href="https://wa.me/5519996249482?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20anticoncep%C3%A7%C3%A3o%20e%20consultar%20a%20agenda%20do%20Dr.%20Jarbas." target="_blank" rel="noreferrer">Prefere conversar agora? Fale com a equipe ↗</a></div></div>
           </details>
           <details class="service-card">
-            <summary><span>03</span><h3>Consulta ginecológica</h3><i aria-hidden="true">+</i></summary>
-            <p>Prevenção, investigação de sintomas e acompanhamento da saúde feminina em diferentes fases da vida.</p>
+            <summary><span>03</span><div><h3>Consulta ginecológica</h3><p>Prevenção, investigação de sintomas e acompanhamento da saúde feminina em diferentes fases da vida.</p><small class="service-signals">Prevenção · ciclos · dores · saúde íntima</small></div><i aria-hidden="true">+</i></summary>
             <div class="service-detail"><strong>Não é preciso esperar algo se agravar</strong><p>Mudanças no ciclo, sangramentos, dores, desconfortos, alterações íntimas ou simplesmente a necessidade de prevenção podem ser o ponto de partida para uma avaliação cuidadosa.</p><div class="service-actions"><a class="service-primary is-preview" href="#" aria-disabled="true">Conhecer este cuidado <small>página em preparação</small></a><a class="service-secondary" href="https://wa.me/5519996249482?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20agenda%20para%20uma%20avalia%C3%A7%C3%A3o%20ginecol%C3%B3gica%20com%20o%20Dr.%20Jarbas." target="_blank" rel="noreferrer">Prefere conversar agora? Fale com a equipe ↗</a></div></div>
           </details>
           <details class="service-card">
-            <summary><span>04</span><h3>Procedimentos</h3><i aria-hidden="true">+</i></summary>
-            <p>Inserção de DIUs e implante anticoncepcional, além de biópsias e cauterizações quando indicadas.</p>
+            <summary><span>04</span><div><h3>Procedimentos</h3><p>Inserção de DIUs e implante anticoncepcional, além de biópsias e cauterizações quando indicadas.</p><small class="service-signals">DIU · implante · biópsias · cauterizações</small></div><i aria-hidden="true">+</i></summary>
             <div class="service-detail"><strong>Indicação clara antes de qualquer procedimento</strong><p>Cada procedimento é considerado a partir de uma avaliação clínica, com explicação sobre indicação, alternativas, preparo e acompanhamento.</p><div class="service-actions"><a class="service-primary is-preview" href="#" aria-disabled="true">Conhecer os procedimentos <small>página em preparação</small></a><a class="service-secondary" href="https://wa.me/5519996249482?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20procedimentos%20e%20a%20agenda%20do%20Dr.%20Jarbas." target="_blank" rel="noreferrer">Prefere conversar agora? Fale com a equipe ↗</a></div></div>
           </details>
           <details class="service-card">
-            <summary><span>05</span><h3>Ginecologia endócrina</h3><i aria-hidden="true">+</i></summary>
-            <p>Avaliação criteriosa das mudanças hormonais e de seus impactos na saúde e na qualidade de vida.</p>
+            <summary><span>05</span><div><h3>Ginecologia endócrina</h3><p>Avaliação criteriosa das mudanças hormonais e de seus impactos na saúde e na qualidade de vida.</p><small class="service-signals">Hormônios · ciclos · energia · bem-estar</small></div><i aria-hidden="true">+</i></summary>
             <div class="service-detail"><strong>Quando o corpo sinaliza uma mudança</strong><p>Irregularidade menstrual, alterações hormonais e sintomas que afetam energia, sono ou bem-estar pedem contexto clínico — não respostas isoladas.</p><div class="service-actions"><a class="service-primary is-preview" href="#" aria-disabled="true">Conhecer este cuidado <small>página em preparação</small></a><a class="service-secondary" href="https://wa.me/5519996249482?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20ginecologia%20end%C3%B3crina%20e%20consultar%20a%20agenda%20do%20Dr.%20Jarbas." target="_blank" rel="noreferrer">Prefere conversar agora? Fale com a equipe ↗</a></div></div>
           </details>
           <details class="service-card">
-            <summary><span>06</span><h3>Outros cuidados</h3><i aria-hidden="true">+</i></summary>
-            <p>Patologia cervical, distúrbios menstruais, miomas, HPV, infecções genitais e outras necessidades ginecológicas.</p>
+            <summary><span>06</span><div><h3>Outros cuidados</h3><p>Patologia cervical, distúrbios menstruais, miomas, HPV, infecções genitais e outras necessidades ginecológicas.</p><small class="service-signals">Miomas · HPV · infecções · alterações menstruais</small></div><i aria-hidden="true">+</i></summary>
             <div class="service-detail"><strong>Seu sintoma não precisa caber em uma categoria</strong><p>Se algo mudou, incomoda ou desperta dúvida, a consulta pode organizar as informações, investigar com critério e indicar o próximo passo mais seguro.</p><div class="service-actions"><a class="service-primary is-preview" href="#" aria-disabled="true">Ver áreas de cuidado <small>página em preparação</small></a><a class="service-secondary" href="https://wa.me/5519996249482?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20atendimento%20e%20gostaria%20de%20consultar%20a%20agenda%20do%20Dr.%20Jarbas." target="_blank" rel="noreferrer">Prefere conversar agora? Fale com a equipe ↗</a></div></div>
           </details>
         </div>
@@ -423,45 +423,48 @@
       <section class="consultation" id="consulta">
         <div class="consultation-copy">
           <p class="section-index">03 — A consulta</p>
-          <p class="eyebrow">Uma experiência de cuidado completa</p>
+          <p class="eyebrow">Escuta · acolhimento · orientação · ação</p>
           <h2>
             <span>Ouvir antes de orientar.</span
             ><em>Compreender antes de decidir.</em>
           </h2>
           <p>
-            Uma consulta cuidadosa começa quando você sente que pode falar. O
-            atendimento considera seu histórico, suas dúvidas e o que faz
-            sentido para a sua vida.
+            Uma consulta cuidadosa começa quando você sente que pode falar e se
+            completa quando há clareza para decidir. Cada etapa conduz à próxima,
+            respeitando sua história, suas dúvidas e o que faz sentido para sua vida.
           </p>
           <ol>
             <li>
               <span>01</span>
               <div>
-                <strong>Escuta e contexto</strong
+                <strong>Escuta</strong
                 ><small
-                  >Tempo para entender sua história, sintomas e
-                  prioridades.</small
+                  >Tempo para compreender sua história, o que mudou e o que hoje precisa de atenção.</small
                 >
               </div>
             </li>
             <li>
               <span>02</span>
               <div>
-                <strong>Avaliação criteriosa</strong
+                <strong>Acolhimento</strong
                 ><small
-                  >Investigação clínica e exames quando realmente
-                  necessários.</small
+                  >Seu momento, suas preocupações e suas escolhas considerados sem julgamentos.</small
                 >
               </div>
             </li>
             <li>
               <span>03</span>
               <div>
-                <strong>Decisão compartilhada</strong
+                <strong>Orientação</strong
                 ><small
-                  >Orientações claras para escolhas conscientes e
-                  seguras.</small
+                  >Possibilidades, evidências e caminhos explicados com clareza e critério.</small
                 >
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Ação</strong><small>O próximo passo mais seguro é definido em conjunto — com propósito, não por impulso.</small>
               </div>
             </li>
           </ol>
