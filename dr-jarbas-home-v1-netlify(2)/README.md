@@ -1,14 +1,12 @@
-# Dr. Jarbas Magalhães — Home V1.1
+# Dr. Jarbas Magalhães — Home V1.3
 
-Versão estática preparada para publicação na Netlify.
+Pacote estático para publicação na Netlify. A pasta publicável é `site`.
 
-Atualizações desta versão:
+Esta versão refina a tipografia responsiva, restaura o monograma circular, amplia a trajetória profissional, usa as imagens fornecidas e inclui avaliações verificadas com atribuição à Doctoralia.
 
-- melhor leitura e quebra de títulos no celular;
-- navegação interna sem travamento;
-- monograma JM refinado;
-- dados profissionais e contatos reais;
-- Centro Personna Ginecologia, endereço, mapa e rota;
-- agenda orientada para consulta direta pelo WhatsApp.
+Correção V1.2.1: navegação interna mobile sem alteração do endereço ou disputa contínua de rolagem, além do alinhamento óptico do monograma JM.
 
-Configuração Netlify: pasta publicável `site`, sem comando de build.
+Evolução V1.3: cards de cuidados expansíveis com orientação clínica breve,
+hierarquia de CTAs e uma passagem de persuasão ética antes da apresentação da
+consulta. As futuras páginas de serviço estão sinalizadas sem competir com o
+contato direto pelo WhatsApp.
