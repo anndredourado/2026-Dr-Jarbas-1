@@ -1,0 +1,48 @@
+DR. JARBAS — ENVIO MANUAL PELO GITHUB NO CELULAR
+
+Repositório: https://github.com/anndredourado/2026-Dr-Jarbas-1
+Branch de produção: main
+Pasta base da Netlify: dr-jarbas-home-v1-netlify(2)
+Pasta publicada no repositório: dr-jarbas-home-v1-netlify(2)/site
+Comando de build: não definido; o pacote já está compilado.
+
+1. Baixe o ZIP e use Meus Arquivos > Downloads > Extrair no Samsung.
+   O GitHub não extrai automaticamente um ZIP enviado ao repositório.
+
+2. No GitHub, entre na branch main e abra a pasta existente:
+   dr-jarbas-home-v1-netlify(2)/site
+   Use Add file > Upload files > choose your files.
+   Se o menu não aparecer, ative a versão para computador do navegador.
+
+3. No seletor do celular, abra a pasta extraída e entre em:
+   dr-jarbas-home-v1-netlify(2)/site
+   Selecione TODOS os 62 arquivos dessa pasta (não há subpastas nela).
+   Aguarde os 62 arquivos aparecerem na lista do GitHub.
+   Use a mensagem: Atualiza site completo do Dr. Jarbas
+   Escolha Commit directly to the main branch e conclua Commit changes.
+   Este envio substitui os arquivos de mesmo nome e adiciona os novos.
+   Não exclua nenhuma pasta ou arquivo manualmente.
+
+4. No GitHub, volte um nível, para dr-jarbas-home-v1-netlify(2).
+   Use Add file > Upload files novamente.
+   Selecione APENAS o netlify.toml que fica na pasta extraída
+   dr-jarbas-home-v1-netlify(2), fora da pasta site.
+   Mensagem: Configura pasta de publicação da Netlify
+   Confirme diretamente em main.
+   Existem dois arquivos chamados netlify.toml: o primeiro envio inclui
+   o da pasta site; este segundo envio usa o de fora da pasta site.
+
+5. Na Netlify, abra o projeto > Deploys e aguarde o deploy desse último commit.
+   Quando aparecer Published, abra o site e confira Home e seis páginas.
+   Se não houver novo deploy automático, use o comando de novo deploy
+   disponível no painel da Netlify.
+
+IMPORTANTE
+- Não envie o ZIP como um único arquivo para o repositório.
+- Não envie os 62 arquivos para a raiz do repositório.
+- Não crie outra pasta site dentro da pasta site.
+- Não envie este LEIA-ME.txt: ele serve apenas como orientação.
+- As pastas antigas assets e photos podem permanecer no repositório;
+  a versão atual usa caminhos ajustados para os arquivos enviados.
+- A integração do ChatGPT não publicou este pacote: os dois commits
+  de upload acima precisam ser concluídos pela sua conta do GitHub.
